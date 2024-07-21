@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .swiper {
+            width: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <navigation-button active>
+                    <i slot="svg-icon" class="fas fa-project-diagram" style="color: white; font-size: large;"></i>
+                    <p slot="title">Projects</p>
+                </navigation-button>
+            </div>
+            <div class="swiper-slide">
+                <navigation-button active>
+                    <i slot="svg-icon" class="fas fa-chart-line" style="color: white; font-size: large;"></i>
+                    <p slot="title">Dashboards</p>
+                </navigation-button>
+            </div>
+            <div class="swiper-slide">
+                <navigation-button active>
+                    <i slot="svg-icon" class="fas fa-file-alt" style="color: white; font-size: large;"></i>
+                    <p slot="title">Docs</p>
+                </navigation-button>
+            </div>
+            <div class="swiper-slide">
+                <navigation-button active>
+                    <i slot="svg-icon" class="fas fa-robot" style="color: white; font-size: large;"></i>
+                    <p slot="title">AI</p>
+                </navigation-button>
+            </div>
+            <div class="swiper-slide">
+                <navigation-button active>
+                    <i slot="svg-icon" class="fas fa-running" style="color: white; font-size: large;"></i>
+                    <p slot="title">Sprints</p>
+                </navigation-button>
+            </div>
+            <div class="swiper-slide">
+                <navigation-button active>
+                    <i slot="svg-icon" class="fas fa-file-alt" style="color: white; font-size: large;"></i>
+                    <p slot="title">Forms</p>
+                </navigation-button>
+            </div>
+            <div class="swiper-slide">
+                <navigation-button active>
+                    <i slot="svg-icon" class="fas fa-clock" style="color: white; font-size: large;"></i>
+                    <p slot="title">Time Tracking</p>
+                </navigation-button>
+            </div>
+            <div class="swiper-slide">
+                <navigation-button active>
+                    <i slot="svg-icon" class="fas fa-comments" style="color: white; font-size: large;"></i>
+                    <p slot="title">Chat</p>
+                </navigation-button>
+            </div>
+            <div class="swiper-slide">
+                <navigation-button active>
+                    <i slot="svg-icon" class="fas fa-chalkboard-teacher" style="color: white; font-size: large;"></i>
+                    <p slot="title">Whiteboards</p>
+                </navigation-button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script type="module" src="./navigation-button.js"></script>
+    <script>
+        // const mainSliderSwiper = new Swiper('.swiper-container', {
+        //     slidesPerView: 3,
+        //     spaceBetween: 10,
+        //     centeredSlides: true,
+        //     // centeredSlides: true,
+        //     // speed: 600,
+        //     // loop: true,
+        //     // slideToClickedSlide: true,
+        //     // autoHeight: true,
+        //     // direction: "horizontal",
+        //     // loopAdditionalSlides: 2,
+        //     // pagination: '.pagination',
+        //     // cssWidthAndHeight: true,
+        //     // initialSlide: 0,
+        //     // direction: "horizontal"
+        // });
+
+        var swiper = new Swiper(".swiper-container", {
+            slidesPerView: 3,
+            slidesPerGroup: 4,
+            spaceBetween: 1,
+            loop: true,
+            // centeredSlides: true,
+            // pagination: {
+            //     el: ".swiper-pagination",
+            //     clickable: true,
+            // },
+        });
+    </script>
+</body>
+
+</html>

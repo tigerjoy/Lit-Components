@@ -1,0 +1,30 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <my-timer duration="7"></my-timer> -->
+    <slider-component></slider-component>
+    <custom-button></custom-button>
+    <swiper-container slides-per-view="3" speed="500" loop="true" css-mode="true">
+        <swiper-slide>Slide 1</swiper-slide>
+        <swiper-slide>Slide 2</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+    </swiper-container>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script type="module" src="./slider-component.js"></script>
+    <script type="module" src="./custom-button.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        :root {
+            --bg-main: var(--color-white);
+            --bg-secondary: var(--color-white);
+            --border-radius-xs: 9px;
+            --color-v3-pink: 250, 18, 227;
+            --color-v3-orange: 255, 98, 33;
+            --color-v3-light-blue: 64, 221, 255;
+            --color-v3-blue: 31, 124, 255;
+            --color-v3-purple: 118, 18, 250;
+            --color-v3-grey-5: 241, 241, 249;
+            --color-v3-white: 255, 255, 255;
+            --color-v3-white-0: 248, 248, 252;
+            --color-gradient-primary: linear-gradient(83deg, rgba(var(--color-v3-light-blue)) -5%, rgba(var(--color-v3-purple)) 51%, rgba(var(--color-v3-pink)) 125%);
+            --color-gradient-purple-1: linear-gradient(29deg, rgba(var(--color-v3-purple)) 26%, rgba(var(--color-v3-pink)) 161%);
+            --color-gradient-purple-2: linear-gradient(133deg, rgba(var(--color-v3-purple)) 16%, rgba(var(--color-v3-pink)) 136%);
+            --color-gradient-blue-1: linear-gradient(21deg, rgba(var(--color-v3-blue)) 33%, rgba(var(--color-v3-light-blue)) 129%);
+            --color-gradient-blue-2: linear-gradient(147deg, rgba(var(--color-v3-blue)) 14%, rgba(var(--color-v3-light-blue)) 103%);
+            --color-gradient-blue-purple-1: linear-gradient(159deg, rgba(var(--color-v3-purple)) 7%, rgba(var(--color-v3-light-blue)) 96%);
+            --color-gradient-blue-purple-2: linear-gradient(331deg, rgba(var(--color-v3-purple)) -6%, rgba(var(--color-v3-light-blue)) 107%);
+            --color-gradient-orange-pink-1: linear-gradient(201deg, rgba(var(--color-v3-pink)) -34%, rgba(var(--color-v3-orange)) 81%);
+            --color-gradient-orange-pink-2: linear-gradient(323deg, rgba(var(--color-v3-pink)) -45%, rgba(var(--color-v3-orange)) 106%);
+            --color-gradient-dark-purple-1: linear-gradient(340deg, rgba(var(--color-v3-pink)) -75%, #101f52 94%);
+            --color-gradient-dark-purple-2: linear-gradient(136deg, rgba(var(--color-v3-pink)) -76%, #101f52 85%);
+            --color-gradient-white-1: linear-gradient(164deg, rgba(var(--color-v3-white-0)) 4%, rgba(var(--color-v3-white)) 89%);
+            --color-button-primary-text: (var(--color-v3-white));
+            --color-button-primary-background: linear-gradient(263deg, rgba(var(--color-v3-pink)) -35%, rgba(var(--color-v3-purple)) 41%, #12d0fa 135%);
+            --color-button-secondary-text: (var(--color-v3-purple));
+            --color-button-tertiary-background: var(--color-v3-grey-5);
+            --color-button-other-text: var(--color-v3-white);
+            --color-grey-0: 41, 45, 52;
+            --color-white: 255, 255, 255;
+            --color-black: var(--color-grey-0);
+            --color-shadow: 16, 30, 54, 0.1;
+            --color-pink-1: 253, 113, 175;
+            --color-pink: var(--color-pink-1);
+            --color-pink-shadow-1: var(--color-pink-1), 0.1;
+            --color-pink-shadow-2: var(--color-pink-1), 0.2;
+            --color-pink-shadow: var(--color-pink-shadow-1);
+            --color-blue-1: 73, 204, 249;
+            --color-blue: var(--color-blue-1);
+            --color-blue-shadow-1: var(--color-blue-1), 0.1;
+            --color-blue-shadow-2: var(--color-blue-1), 0.2;
+            --color-blue-shadow: var(--color-blue-shadow-1);
+            --color-green-1: 0, 184, 132;
+            --color-green: var(--color-green-1);
+            --color-green-shadow-1: var(--color-green-1), 0.1;
+            --color-green-shadow-2: var(--color-green-1), 0.2;
+            --color-green-shadow: var(--color-green-shadow-1);
+            --color-mint: var(--color-mint);
+            --color-purple-1: 123, 104, 238;
+            --color-purple: var(--color-purple-1);
+            --color-purple-shadow-1: var(--color-purple-1), 0.1;
+            --color-purple-shadow-2: var(--color-purple-1), 0.2;
+            --color-purple-shadow-4: var(--color-purple-1), 0.4;
+            --color-purple-shadow-5: var(--color-purple-1), 0.5;
+            --color-purple-shadow: var(--color-purple-shadow-1);
+            --color-violet-1: 155, 81, 224;
+            --color-violet: var(--color-violet-1);
+            --color-violet-shadow-1: var(--color-violet-1), 0.1;
+            --color-violet-shadow-2: var(--color-violet-1), 0.2;
+            --color-violet-shadow: var(--color-violet-shadow-1);
+            --color-yellow-1: 255, 200, 0;
+            --color-yellow: var(--color-yellow-1);
+            --color-yellow-shadow-1: var(--color-yellow-1), 0.1;
+            --color-yellow-shadow-2: var(--color-yellow-1), 0.1;
+            --color-yellow-shadow: var(--color-yellow-shadow-1);
+            --color-gradient-cyan-accent-light-1: var(--color-white), 0.1;
+            --color-gradient-cyan-accent-shadow-1: var(--color-shadow);
+            --color-success-1: 0, 136, 68;
+            --color-success: var(--color-success-1);
+            --color-warning-1: 248, 174, 0;
+            --color-warning: var(--color-warning-1);
+            --color-error-1: 211, 61, 68;
+            --color-error: var(--color-error-1);
+            --color-brand-clickup: var(--color-purple-1);
+            --color-main-bg: var(--color-white);
+            --color-main-text: var(--color-grey-0);
+            --color-main-link: var(--color-brand-clickup);
+            --color-bg: var(--color-white);
+            --color-text: var(--color-grey-0);
+            --color-link: var(--color-brand-clickup);
+            --easing-natural: cubic-bezier(0.5, 0, 0.5, 1);
+            --easing-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --font-fallback: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+            --font-axiforma: Axiforma;
+            --font-default: var(--font-axiforma), var(--font-fallback);
+            --size-12: 0.75rem;
+            --size-14: 0.875rem;
+            --size-16: 1rem;
+            --size-18: 1.125rem;
+            --size-32: 2rem;
+            --size-38: 2.375rem;
+            --size-48: 3rem;
+            --size-50: 3.125rem;
+            --size-xl: var(--size-50);
+            --size-hero-heading: var(--size-48);
+            --size-content-subheading: var(--size-12);
+            --size-content-xl: var(--size-48);
+            --size-content-lg: var(--size-38);
+            --size-content-default: var(--size-14);
+            --size-label: var(--size-content-subheading);
+            --size-v3-container: 1160px;
+            --size-v3-homepage-container: var(--size-v3-container);
+            --spacing-5: 50px;
+            --spacing-10: 100px;
+            --spacing-13: 130px;
+            --spacing-15: 150px;
+            --spacing-block-between-containers: var(--spacing-5);
+            --spacing-block-container: var(--spacing-10);
+            --spacing-block-container-no-background: var(--spacing-15);
+            --spacing-inline-container: var(--spacing-13);
+            --transition-long: 0.5s var(--easing-natural);
+            --transition-short: 0.25s var(--easing-natural);
+            --transition-long-bounce: 0.5s var(--easing-bounce);
+            --transition-short-bounce: 0.25s var(--easing-bounce);
+        }
+
+        .custom-tab-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            inline-size: 115px;
+            padding: 0;
+            border: unset;
+            background-color: transparent;
+            transition: transform .2s ease-in-out;
+        }
+
+        .custom-button {
+            --color-icon: rgb(var(--color-white));
+            --button-bg: var(--highlight-primary, var(--color-purple));
+            --button-text: var(--color-white);
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            padding: var(--button-padding, var(--size-18) var(--size-32) var(--size-16));
+            border: var(--button-border, unset);
+            border-radius: var(--button-border-radius, var(--border-radius-xs));
+            background-color: rgb(var(--button-bg));
+            color: rgb(var(--button-text));
+            font-weight: 700;
+            font-size: var(--button-font-size, var(--size-14));
+            transition: var(--button-transition, var(--transition-short));
+            transform: translateY(0);
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .custom-button:active,
+        .custom-button:hover {
+            cursor: pointer;
+            transform: translateY(1px);
+        }
+
+        .custom-button-shadow {
+            --shadow-color: var(--button-shadow-color, var(--highlight-shadow, var(--color-shadow)));
+            --shadow-size: var(--button-shadow-from, var(--shadow-button, 0 10px 25px));
+        }
+
+        .custom-button-shadow:after,
+        .custom-button-shadow:before {
+            content: "";
+            position: absolute;
+            inset-inline-start: 0;
+            inset-block-start: 0;
+            inline-size: 100%;
+            block-size: 100%;
+            border-radius: var(--button-border-radius, var(--border-radius, var(--border-radius-xs)));
+            transition: opacity var(--transition-short);
+        }
+
+        .custom-button-shadow:before {
+            box-shadow: var(--shadow-size) rgba(var(--shadow-color));
+            opacity: 1;
+        }
+
+        .custom-button-shadow:hover:before {
+            opacity: 0;
+        }
+
+        .custom-tab-button svg {
+            filter: drop-shadow(0 5px 20px rgba(127, 118, 179, .1));
+            transform: scale(.9);
+        }
+
+        .custom-tab-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            inline-size: 115px;
+            padding: 0;
+            border: unset;
+            background-color: transparent;
+            transition: transform .2s ease-in-out;
+        }
+
+        .custom-tab-button:after,
+        .custom-tab-button:before {
+            display: none;
+        }
+
+        .custom-tab-button:hover {
+            cursor: pointer;
+            transform: translateY(-3px);
+        }
+
+        .svg-container-wrapper {
+            flex-direction: column;
+            inline-size: 115px;
+        }
+
+        .svg-container-wrapper {
+            display: flex;
+            align-items: center;
+            filter: drop-shadow(0 5px 20px rgba(127, 118, 179, .1));
+        }
+
+        .svg-container-wrapper-active .svg-container {
+            background: linear-gradient(130deg, #24223e, #282642);
+            transform: scale(1.25);
+        }
+
+        .svg-container-wrapper-active .tab-title {
+            color: #24223e;
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        .svg-container {
+            display: flex;
+            align-items: center;
+            filter: drop-shadow(0 5px 20px rgba(127, 118, 179, .1));
+        }
+
+        .svg-container {
+            position: relative;
+            flex-shrink: 0;
+            justify-content: center;
+            inline-size: 55px;
+            block-size: 55px;
+            background: rgb(var(--color-white));
+            background: linear-gradient(130deg, #f8f8fc, #f8f8fc);
+            -webkit-clip-path: path("M55 27.5C55 21.3548 54.7339 16.3754 54.3904 12.5079C53.8158 6.03697 48.963 1.18424 42.4921 0.609579C38.6246 0.266118 33.6452 0 27.5 0C21.3548 0 16.3754 0.266118 12.5079 0.609579C6.03697 1.18424 1.18424 6.03697 0.609579 12.5079C0.266118 16.3754 0 21.3548 0 27.5C0 33.8762 0.286505 38.9973 0.648635 42.9236C1.22382 49.1598 5.82715 53.8374 12.0652 54.3924C15.9146 54.7349 20.9952 55 27.5 55C34.0048 55 39.0854 54.7349 42.9348 54.3924C49.1729 53.8374 53.7762 49.1598 54.3514 42.9236C54.7135 38.9973 55 33.8762 55 27.5Z");
+            clip-path: path("M55 27.5C55 21.3548 54.7339 16.3754 54.3904 12.5079C53.8158 6.03697 48.963 1.18424 42.4921 0.609579C38.6246 0.266118 33.6452 0 27.5 0C21.3548 0 16.3754 0.266118 12.5079 0.609579C6.03697 1.18424 1.18424 6.03697 0.609579 12.5079C0.266118 16.3754 0 21.3548 0 27.5C0 33.8762 0.286505 38.9973 0.648635 42.9236C1.22382 49.1598 5.82715 53.8374 12.0652 54.3924C15.9146 54.7349 20.9952 55 27.5 55C34.0048 55 39.0854 54.7349 42.9348 54.3924C49.1729 53.8374 53.7762 49.1598 54.3514 42.9236C54.7135 38.9973 55 33.8762 55 27.5Z");
+        }
+
+        .svg-container-wrapper-active .svg-container {
+            background: linear-gradient(130deg, #24223e, #282642);
+            transform: scale(1.25);
+        }
+
+        .svg-container svg {
+            max-block-size: 32px;
+        }
+
+        .tab-title {
+            inline-size: 115px;
+            -webkit-margin-before: 11px;
+            margin-block-start: 11px;
+            color: #7b73ae;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: normal;
+            text-align: center;
+        }
+
+        .svg-container-wrapper-active .tab-title {
+            color: #24223e;
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        .svg-container-wrapper-active .svg-container svg path,
+        .svg-container-wrapper-active .svg-container svg rect {
+            stroke: rgb(var(--color-white));
+        }
+    </style>
+</head>
+
+<body>
+    <button data-testid="cu-button" type="button" class="custom-button custom-button-shadow custom-tab-button"
+        data-segment-button-clicked="Dashboards" sectionmodalname="CuHomeTabs">
+        <div class="svg-container-wrapper ">
+            <div class="svg-container">
+                <!-- <div></div>
+                <div></div> -->
+                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M31.3414 16.15C31.3414 12.9593 31.2077 10.3543 31.0321 8.30902C30.7233 4.71314 28.0243 2.01416 24.4284 1.70536C22.3831 1.52972 19.7782 1.396 16.5875 1.396C13.3968 1.396 10.7918 1.52972 8.74652 1.70536C5.15064 2.01416 2.45166 4.71314 2.14286 8.30902C1.96722 10.3543 1.8335 12.9593 1.8335 16.15C1.8335 19.4688 1.97817 22.1538 2.16422 24.2346C2.47406 27.7 5.03436 30.2969 8.50083 30.5949C10.5418 30.7704 13.2059 30.9039 16.5875 30.9039C19.969 30.9039 22.6331 30.7704 24.6741 30.5949C28.1406 30.2969 30.7009 27.7 31.0107 24.2346C31.1968 22.1538 31.3414 19.4688 31.3414 16.15Z"
+                        stroke="#7F76B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M30.7738 9.625L24.3078 16.6083C23.9108 17.0371 23.3423 17.2652 22.759 17.2299L15.356 16.7812C14.7069 16.7419 14.081 17.0286 13.6869 17.5458L10.2461 22.0619C9.94527 22.4568 9.50519 22.722 9.01558 22.8036L2.96826 23.8115"
+                        stroke="#7F76B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M23.6807 17.002L31.3414 9.625L30.7739 27.2163L25.9505 30.621L8.07552 30.9047L4.1033 28.9186L2.11719 23.8115L9.7779 22.6766L14.885 16.7183L23.6807 17.002Z"
+                        fill="#7F76B3" fill-opacity="0.1"></path>
+                </svg>
+            </div>
+            <div class="tab-title">Dashboards</div>
+        </div>
+    </button>
+    <button data-testid="cu-button" type="button" class="custom-button custom-button-shadow custom-tab-button"
+        data-segment-button-clicked="Projects" sectionmodalname="CuHomeTabs">
+        <div class="svg-container-wrapper svg-container-wrapper-active">
+            <div class="svg-container">
+                <!-- <div></div>
+                <div></div> -->
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M30.6032 15.8506C30.6032 19.1695 30.4585 21.8545 30.2724 23.9353C29.9626 27.4007 27.4023 29.9976 23.9358 30.2956C21.8948 30.4711 19.2307 30.6046 15.8492 30.6046C12.4676 30.6046 9.80354 30.4711 7.76255 30.2956C4.29608 29.9976 1.73578 27.4007 1.42593 23.9353C1.23989 21.8545 1.09521 19.1695 1.09521 15.8506C1.09521 12.6599 1.22894 10.055 1.40458 8.0097C1.71338 4.41382 4.41236 1.71484 8.00824 1.40604C10.0536 1.2304 12.6585 1.09668 15.8492 1.09668"
+                        stroke="#7b73ae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M9.82514 15.5405C13.3924 17.9488 14.9206 20.0857 14.9206 20.0857C14.9206 20.0857 16.4583 16.585 19.4075 12.7251C22.5841 8.56757 24.9387 7.00165 24.9387 7.00165"
+                        stroke="#7b73ae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </div>
+            <div class="tab-title">Projects</div>
+        </div>
+    </button>
+</body>
+
+</html>

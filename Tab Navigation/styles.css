@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.swiper-container {
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide-active {
+    transform: scale(1.2);
+    color: #000;
+}
