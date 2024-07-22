@@ -199,19 +199,9 @@ export class NavigationButton extends LitElement {
   }
 
   _applyInnerStyles(svgElement, strokeColor) {
-    const paths = svgElement.querySelectorAll('path, rect');
-    paths.forEach((path) => {
+    const elements = svgElement.querySelectorAll('path, rect, line, polyline, circle');
+    elements.forEach((path) => {
       path.style.stroke = strokeColor;
-    });
-
-    const lines = svgElement.querySelectorAll('line');
-    lines.forEach((line) => {
-      line.style.stroke = strokeColor;
-    });
-
-    const polylines = svgElement.querySelectorAll('polyline');
-    polylines.forEach((polyline) => {
-      polyline.style.stroke = strokeColor;
     });
   }
 

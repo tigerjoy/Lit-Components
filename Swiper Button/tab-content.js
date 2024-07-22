@@ -8,9 +8,15 @@ export class TabContent extends LitElement {
     };
 
     static styles = css`
+        .tab-content-parent-container {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .tab-content {
             position: relative;
-            max-inline-size: 100%;
+            max-inline-size: fit-content;
             z-index: 3;
             margin-inline: 40px;
         }
@@ -38,6 +44,10 @@ export class TabContent extends LitElement {
         @media (min-width: 1200px) {
             .tab-content-image-secondary {
                 display: block;
+            }
+
+            .tab-content-image-hidden {
+                display: none;
             }
         }
 
@@ -130,7 +140,7 @@ export class TabContent extends LitElement {
                 <div class="tab-content">
                     <div class="tab-content-image ${this.primaryImageUrl ? "tab-content-image-visible" : "tab-content-image-hidden"}">
                         <picture class="" data-testid="cu-image">
-                            <img src="${this.primaryImageUrl}" height="1248" width="1870" alt="${this.tabTitle}" loading="eager"
+                            <img src="${this.primaryImageUrl}" height="900" width="1200" alt="${this.tabTitle}" loading="eager"
                                 decoding="async">
                         </picture>
                     </div>
